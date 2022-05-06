@@ -1,5 +1,5 @@
 ---
-title: Misc. - ångstromCTF - Confetti
+title: ångstromCTF - Misc. - Confetti
 published: true
 ---
 &nbsp;
