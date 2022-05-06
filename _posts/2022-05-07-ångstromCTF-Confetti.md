@@ -1,51 +1,26 @@
 ---
 title: Misc. - ångstromCTF - Confetti
-published: false
+published: true
 ---
 &nbsp;
 
-For this challenge we were given an image of confetti
+For this challenge we were given an image of confetti and the lyrics to the song Confetti by Little Mix: "From the sky, drop like confetti All eyes on me, so V.I.P All of my dreams, from the sky, drop like confetti"
+
+![Confetti snap](https://user-images.githubusercontent.com/104336820/167222509-53cfd4d5-a8c8-40ac-9438-07b1aa569e6d.png)
 <br><br>
 
-## <- Some recon to get an idea of what we need to do ->
+## <- Do your thing, binwalk ->
 
-Before we run the image file through any of our tools, let's first do <code>eog tv_chall.jpg</code> to see if we can view the image before proceeding. Our image viewer throws 
-an error, telling us that it does not recognize the image as an actual JPEG. 
+We passed the image through binwalk first to see if there was anything else attached to the file. Going back to the lyrics we were given for the description of this challenge, it mentions confetti dropping from the sky. Reminds us of a certain binwalk argument that looks like a star falling from the sky: <code>binwalk --dd ".*" confetti.png</code>
 
-![eog error](https://user-images.githubusercontent.com/104336820/165018827-0ee7e2c9-7103-478c-b879-91b24dc34044.png)
+![binwalk-stars](https://user-images.githubusercontent.com/104336820/167224259-8fbff8f7-b7e5-43c2-9a09-6f58c0fd518c.png)
 
-Of course, we didn't expect it to be as easy as that but nonetheless, it is always a good idea to run down the list of possible avenues to gain any extra info you can.
-                
+Now that we can see that there is more here than just the single image of confetti, it is likely that our flag is hanging out somewhere in that data. Let's take a look...
 
-Next, we run some basic tools to get some more technical information about the image we are working with. We put the file through binwalk first with <code>binwalk -e tv_chal.jpg</code>
+![Confetti extracted](https://user-images.githubusercontent.com/104336820/167224799-15357ef1-b4a9-48a7-966d-3341a61fa531.png)
 
-![binwalk](https://user-images.githubusercontent.com/104336820/165020194-2a2a0689-4478-4fd9-bf4f-2de5ef113c02.png)
+![Confetti extracted folder](https://user-images.githubusercontent.com/104336820/167224835-b0acd030-8e89-4c1c-b6f9-27d1065e5ddd.png)
 
-binwalk shows us that there is nothing here to extract. This leads us to believe that maybe we should look at the metadata 
-as we now know the flag isn't in a file that we need to extract. The image started life as a TIFF type. Nothing odd here so moving on to try to dig a bit deeper.
+Sitting in the extracted folder we can see what appears to be a flag in the center of one of the images. Clicking into it, and we are able to capture the flag.
 
-We fire up exiftool with <code>exiftool -v tv_chal.jpg</code> to take a look at the metadata of the file. 
-Here we find a couple of things of interest...
-
-![exiftool](https://user-images.githubusercontent.com/104336820/165020443-d386a41f-2448-4eb6-9ff2-6ac16eeab562.png)
-
-exiftool gives us a warning that we have an unknown 30-byte header. Then it proceeds to reset the file type as the header configuration is unrecognized which results in our inability to view the image in its current state. All of our recon has led us to assume that the image itself contains the flag and likely it is a matter of a corrupted header. We likely have ourselves a magic numbers issue.
-
-
-## <- Fixing the header ->
-
-To take a look at the header we use <code>hexeditor tv_chal.jpg</code> and immediately we are able to see that the file signature for a JPEG file is not what we have here for the magic numbers. 
-
-![hexeditor](https://user-images.githubusercontent.com/104336820/165021657-cf2d5924-f090-44e5-bf89-538d467d63f1.png)
-
-Let's fix that!
-
-![header fixed](https://user-images.githubusercontent.com/104336820/165021788-104b16c0-89cf-47d2-83b0-679c987cc082.png)
-
-Now that the magic numbers have been corrected, we check <code>eog tv_chal.jpg</code> again to see if we can view the image now...
-
-![can view](https://user-images.githubusercontent.com/104336820/165021971-5fc73c3a-71a8-49e8-8eeb-bc2ae8cb63bd.png)
-
-Looks like the issue was indeed just a corrupted header! And in the corner of the television in the image, we can see an image of some text. If we zoom in we can retrieve our flag.
-
-![tv flag](https://user-images.githubusercontent.com/104336820/165022223-d28d0fc8-9ca7-40bd-88f4-7e771656f216.png)
+![Confetti Flag](https://user-images.githubusercontent.com/104336820/167224949-8f91dae5-b5ba-428f-b240-8605828ea4ca.png)
