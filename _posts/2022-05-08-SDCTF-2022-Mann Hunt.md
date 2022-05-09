@@ -6,7 +6,7 @@ This was a really fun OSINT challenge that tasked us with finding someone based 
 
 The challenge came with the following description...
 
-We were on the trail of a notorious hacker earlier this week, but they suddenly went dark, taking down all of their internet presence...All we have is a username. We need you to track down their personal email address! It will be in the form <code class="language-plaintext highlighter-rouge">****.sdctf@gmail.com</code>. Once you find it, send them an email to demand the flag!
+"We were on the trail of a notorious hacker earlier this week, but they suddenly went dark, taking down all of their internet presence...All we have is a username. We need you to track down their personal email address! It will be in the form <code class="language-plaintext highlighter-rouge">****.sdctf@gmail.com</code>. Once you find it, send them an email to demand the flag!"
 
 Username:
 mann5549
@@ -20,7 +20,7 @@ Doing that manually could take a large amount of time so we are going to automat
 
 ![sherlock](https://user-images.githubusercontent.com/104336820/167326624-afa7cd75-6698-49e7-badb-6d71abaada85.png)
 
-Sherlock takes the username we give it and runs it against numerous social media websites to determine if the username is found on any of the platforms it checked. After sherlock was done running the username it returns a small list of profiles with that username across a few various sites. This should narrow down our starting point significantly.
+Sherlock is a script that takes the username we give it and it runs the name against 300 social media websites to determine if the username is found on any of the platforms it checked. After sherlock was done running the username it returns a small list of profiles with that username across a few various sites. This should narrow down our starting point significantly.
 
 As this is a small list of links to go through, we can go ahead and check them out manually. We made our way through the list but stopped on the Twitter account as it caught our attention... 
 
@@ -41,7 +41,11 @@ The homepage of the website doesn't contain much other than a message telling us
 
 ![mann codes homepage](https://user-images.githubusercontent.com/104336820/167343215-25835972-74c2-4cc6-80b4-93a103524966.png)
 
-Before trying anything else, we inspect the website from our Firefox browser by right clicking on the page and selecting Inspect. Within the <code class="language-plaintext highlighter-rouge"><head></head></code> tags we can see that there is some useful metadata here. We can see a link to github repository
+Before trying anything else, we inspect the website from our Firefox browser by right clicking on the page and selecting Inspect. Within the <code class="language-plaintext highlighter-rouge"><head></head></code> tags we can see that there is some useful metadata here. We can see a link to a github repository.
 
 ![mannhub source github](https://user-images.githubusercontent.com/104336820/167346888-4c10310d-c9f8-48d0-bdd5-37d3c4d570eb.png)
 
+&nbsp;
+## Pivoting to the Github repo -->
+
+Once we are 
