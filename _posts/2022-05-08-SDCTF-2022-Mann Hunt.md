@@ -62,7 +62,7 @@ If we expand this section to see further up the file, we find a summary that rea
 
 ![expanded changes](https://user-images.githubusercontent.com/104336820/167351507-f0c55c47-383b-4239-a293-47c1908c7e4c.png)
 
-We decide to just keep it simple and put our amazing Google skills to work and the first result matches our query and goes to a LinkedIn account for an Emanuel Hunt.
+We decide to just keep it simple and put our amazing Google skills to work by searching for the phrase found in the target's deleted file. The first result in the Google SERPs matches our query and it leads to a LinkedIn account for an Emanuel Hunt.
 
 &nbsp;
 ## LinkedIn -->
