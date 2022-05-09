@@ -20,7 +20,7 @@ Doing that manually could take a large amount of time so we are going to automat
 
 ![sherlock](https://user-images.githubusercontent.com/104336820/167326624-afa7cd75-6698-49e7-badb-6d71abaada85.png)
 
-Sherlock is a script that takes the username we give it and it runs the name against 300 social media websites to determine if the username is found on any of the platforms it checked. After sherlock was done running the username it returns a small list of profiles with that username across a few various sites. This should narrow down our starting point significantly.
+Sherlock is a script that takes the username we give it and it runs the name against 300 websites to determine if the username is found on any of the platforms it checked. After sherlock was done running the username it returns a small list of profiles with that username across a few various sites. This should narrow down our starting point significantly.
 
 As this is a small list of links to go through, we can go ahead and check them out manually. We made our way through the list but stopped on the Twitter account as it caught our attention... 
 
@@ -36,7 +36,7 @@ There are no tweets here but there is here is a link to the users website.
 &nbsp;
 ## Mann.codes website -->
 
-Pivoting from the Twitter profile, we head over to the website that was linked in the users Twitter profile. 
+Moving away from the Twitter profile, we head over to the website that was linked in the users Twitter profile. 
 The homepage of the website doesn't contain much other than a message telling us that the target knows who we are and that we will never find him.
 
 ![mann codes homepage](https://user-images.githubusercontent.com/104336820/167343215-25835972-74c2-4cc6-80b4-93a103524966.png)
