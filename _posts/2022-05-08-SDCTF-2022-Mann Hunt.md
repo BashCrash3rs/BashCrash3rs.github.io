@@ -16,7 +16,9 @@ mann5549
 
 Since all we have is to go off of is a username, we need to leverage it to hone in a bit on our target and maybe some way to pivot onto another clue. The fastest way to get some groundwork laid is to search the username across a large variety of social media sites.
 
-Doing that manually could take a large amount of time so we are going to automate this with a tool called sherlock. To run the check we head over to our terminal and use <code class="language-plaintext highlighter-rouge">python3 sherlock mann5549</code>
+Doing that manually could take a large amount of time so we are going to automate this process with sherlock. To run the check we head over to our terminal and use <code class="language-plaintext highlighter-rouge">python3 sherlock mann5549</code>
+
+![sherlock](https://user-images.githubusercontent.com/104336820/167326624-afa7cd75-6698-49e7-badb-6d71abaada85.png)
 
 &nbsp;
 ## Pivoting to the Twitter profile -->
