@@ -72,7 +72,7 @@ We decide to just keep it simple and put our amazing Google skills to work and t
 In the "About" section of our target's LinkedIn page we are given a link to download his resume. We visit the link to look at his resume and notice that the email we need to retrieve has been replaced with asteriks. 
 
 &nbsp;
-## Got the credentials -->
+## Got the credentials & the flag -->
 
 ![resume1](https://user-images.githubusercontent.com/104336820/167353216-9460ecb5-5a6b-40c3-8eb0-5b8c47c0fd92.png)
 
@@ -80,6 +80,11 @@ Luckily for us, in the right-hand panel under the sharing section we can hover o
 
 ![mannemail](https://user-images.githubusercontent.com/104336820/167353059-de10f7a2-d40f-4e79-bfc1-b934b8af552d.png)
 
+So, we send them an email to demand the flag back
 
+![demand](https://user-images.githubusercontent.com/104336820/167354422-a1f87546-b17e-4c5b-8f26-0fe4d764fc50.png)
 
+And they responded back with the flag in the body of the email.
+
+![response](https://user-images.githubusercontent.com/104336820/167354486-0c98df6a-0903-4ec9-b62e-988612a6603e.png)
 
