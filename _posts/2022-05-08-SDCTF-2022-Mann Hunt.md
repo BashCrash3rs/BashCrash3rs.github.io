@@ -27,16 +27,20 @@ As this is a small list of links to go through, we can go ahead and check them o
 &nbsp;
 ## Twitter profile -->
 
-![mann Twitter](https://user-images.githubusercontent.com/104336820/167339230-c0ef8504-84ef-4075-bebe-f3ec5cc6b22c.png)
-
 We go ahead and check out a few of them and then we land on the Twitter profile. Immediately upon opening the profile, we can see that this users bio mentions how they set their Twitter account to private because people are after them. 
 
 There are no tweets here but there is here is a link to the users website. 
 
+![mann Twitter](https://user-images.githubusercontent.com/104336820/167339230-c0ef8504-84ef-4075-bebe-f3ec5cc6b22c.png)
+
 &nbsp;
 ## Mann.code website -->
 
-Pivoting from the Twitter profile, he head over to the website that was linked in the users Twitter profile. 
-the homepage of the website doesn't contain much other than a message telling us that the target knows who we are and that we will never find him.
+Pivoting from the Twitter profile, we head over to the website that was linked in the users Twitter profile. 
+The homepage of the website doesn't contain much other than a message telling us that the target knows who we are and that we will never find him.
 
 ![mann codes homepage](https://user-images.githubusercontent.com/104336820/167343215-25835972-74c2-4cc6-80b4-93a103524966.png)
+
+Before trying anything else, we inspect the website from our Firefox browser by right clicking on the page and selecting Inspect. Within the <code class="language-plaintext highlighter-rouge"><head></head></code> we can see that there is some useful metadata here. We can see a link to github repository
+
+![mann source](https://user-images.githubusercontent.com/104336820/167344934-e39ef41a-4f41-401e-9fe8-70cc3869135b.png)
