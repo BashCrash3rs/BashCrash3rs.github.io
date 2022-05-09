@@ -20,16 +20,23 @@ Doing that manually could take a large amount of time so we are going to automat
 
 ![sherlock](https://user-images.githubusercontent.com/104336820/167326624-afa7cd75-6698-49e7-badb-6d71abaada85.png)
 
-Sherlock takes the username we give it and runs it against numerous social media websites to determine if the username is found on any of the platforms it checked. found a handful of profiles with that username across a few sites. This should narrow down our starting point significantly.
+Sherlock takes the username we give it and runs it against numerous social media websites to determine if the username is found on any of the platforms it checked. After sherlock was done running the username it returns a small list of profiles with that username across a few various sites. This should narrow down our starting point significantly.
+
+As this is a small list of links to go through, we can go ahead and check them out manually. We made our way through the list but stopped on the Twitter account as it caught our attention... 
 
 &nbsp;
-## Pivoting to the Twitter profile -->
+## Twitter profile -->
 
 ![mann Twitter](https://user-images.githubusercontent.com/104336820/167339230-c0ef8504-84ef-4075-bebe-f3ec5cc6b22c.png)
 
-We go ahead and check out a few of them and then we land on the Twitter profile. Immediately upon opening the profile, we can see that this users bio mentions how they turned their Twitter account to private because people are after them. 
+We go ahead and check out a few of them and then we land on the Twitter profile. Immediately upon opening the profile, we can see that this users bio mentions how they set their Twitter account to private because people are after them. 
 
 There are no tweets here but there is here is a link to the users website. 
 
 &nbsp;
 ## Mann.code website -->
+
+Pivoting from the Twitter profile, he head over to the website that was linked in the users Twitter profile. 
+the homepage of the website doesn't contain much other than a message telling us that the target knows who we are and that we will never find him.
+
+![mann codes homepage](https://user-images.githubusercontent.com/104336820/167343215-25835972-74c2-4cc6-80b4-93a103524966.png)
