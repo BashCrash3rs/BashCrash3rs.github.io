@@ -48,4 +48,4 @@ Before trying anything else, we inspect the website from our Firefox browser by 
 &nbsp;
 ## Pivoting to the Github repo -->
 
-Once we are 
+Following the link we found tucked away in the source code of the website, we end up on the Github repository owned by our target
