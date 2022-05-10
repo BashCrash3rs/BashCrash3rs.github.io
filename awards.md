@@ -3,7 +3,7 @@ layout: page
 title: Awards & Certificates
 ---
 
-# 2020
+# 2022
 
 ![Nahamcon 2022](https://user-images.githubusercontent.com/104336820/167515683-ab7cf630-9d63-4195-8c2e-5a6190e2f99a.png)
 
