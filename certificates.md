@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Awards & Certificates
+title: Certificates
 ---
 
 # 2022
