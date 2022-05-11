@@ -2,8 +2,6 @@
 title: ångstromCTF - MISC - Confetti
 published: true
 ---
-&nbsp;
-
 For this challenge we were given an image of confetti and the lyrics to the song Confetti by Little Mix: "From the sky, drop like confetti All eyes on me, so V.I.P All of my dreams, from the sky, drop like confetti"
 
 ![Confetti snap](https://user-images.githubusercontent.com/104336820/167222509-53cfd4d5-a8c8-40ac-9438-07b1aa569e6d.png)
@@ -11,7 +9,7 @@ For this challenge we were given an image of confetti and the lyrics to the song
 
 ## <- Do your thing, binwalk ->
 
-We passed the image through binwalk first to see if there was anything else attached to the file. Going back to the lyrics we were given for the description of this challenge, it mentions confetti dropping from the sky. Reminds us of a certain binwalk argument that looks like a star falling from the sky: <code>binwalk --dd ".*" confetti.png</code>
+We passed the image through binwalk first to see if there was anything else attached to the file. Going back to the lyrics we were given for the description of this challenge, it mentions confetti dropping from the sky. Reminds us of a certain binwalk argument that looks like a star falling from the sky: <code class="language-plaintext highlighter-rouge">binwalk --dd ".*" confetti.png</code>
 
 ![binwalk-stars](https://user-images.githubusercontent.com/104336820/167224259-8fbff8f7-b7e5-43c2-9a09-6f58c0fd518c.png)
 
