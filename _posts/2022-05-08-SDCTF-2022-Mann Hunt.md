@@ -1,5 +1,5 @@
 ---
-title: SDCTF 2022 - OSINT - Mann Hunt
+title: San Diego CTF 2022 - OSINT - Mann Hunt
 published: true
 ---
 This was a really fun OSINT challenge that tasked us with finding someone based on nothing more than a username.
