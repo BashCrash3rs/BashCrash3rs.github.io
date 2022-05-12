@@ -26,7 +26,7 @@ Trying to figure out how to search the iFunny website for specific usernames wil
 
 Once on the Wayback Machine, we are going to want to search for DannFlashes on the iFunny website.
 
-To do this, we need to know how the website structures the slug in the permalinks. Considering that this is listed as an easy OSINT challenge, we can probably guess at this one and get it right. Likely, we are going to need to include /user/DanFlashes to the end of the domain name.
+To do this, we need to know how the website structures the slug in the permalinks. Considering that this is listed as an easy OSINT challenge, we can probably guess at this one and get it right. Likely, we are going to need to include <code class="language-plaintext highlighter-rouge">/user/DanFlashes</code> to the end of the domain name.
 
 ![WBDanFlashes](https://user-images.githubusercontent.com/104336820/168002684-dd058cc8-c04a-4204-9a90-e6b925ee60b1.png)
 
