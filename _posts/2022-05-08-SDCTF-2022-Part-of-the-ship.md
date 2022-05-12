@@ -24,7 +24,7 @@ The website that these phrases are a reference to is <code class="language-plain
 
 Trying to figure out how to search the iFunny website for specific usernames will only leave you frustrated. No worries though, we are going to listen to one of the clues we were given in the description and head over to the wayback machine.
 
-Once on the Wayback Machine, we are going to want to search for DannFlashes on the iFunny website.
+Once on the Wayback Machine, we are going to want to search for DanFlashes on the iFunny website.
 
 To do this, we need to know how the website structures the slug in the permalinks. Considering that this is listed as an easy OSINT challenge, we can probably guess at this one and get it right. Likely, we are going to need to include <code class="language-plaintext highlighter-rouge">/user/DanFlashes</code> to the end of the domain name.
 
