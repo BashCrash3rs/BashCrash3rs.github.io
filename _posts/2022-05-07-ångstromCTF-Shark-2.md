@@ -2,8 +2,13 @@
 title: ångstromCTF - MISC - Shark 2
 published: true
 ---
+In this continuation to the Shark 1 challenge, this one will also focus on analyzing packet capture files.
+
+This description for this challenges is as follows... 
 
 ![Shark 2 Chall](https://user-images.githubusercontent.com/104336820/168149246-13f1cc23-b9c4-4aef-90b5-12111b395ac5.png)
+
+Looks like their friend hasn't learned to safeguard their traffic better. Let's download the <code class="language-plaintext highlighter-rouge">.pcapng</code> file that is linked in the description and take a peek at what we have.
 
  
 &nbsp;
@@ -22,12 +27,14 @@ published: true
 
 
 &nbsp;
+## Exporting the data -->
+
+![ASCII](https://user-images.githubusercontent.com/104336820/168213943-85a08240-4faa-41c8-8f2d-1ec1be687956.png)
+
+
+
+&nbsp;
 ## That shark has our flag -->
 
 ![shark 2 flag](https://user-images.githubusercontent.com/104336820/168150064-40b092b7-abf4-4002-8d0a-98723b688a29.png)
-
-
-
-
-<code class="language-plaintext highlighter-rouge">
 
