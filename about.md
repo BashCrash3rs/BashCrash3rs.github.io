@@ -1,9 +1,7 @@
 ---
 layout: default
-title: About Me // Terminal
+title: About BashCrash3rs
 ---
-
-Your existing Markdown content goes here. All of your original text, paragraphs, lists, and headings will remain completely intact right here.
 
 <!-- ================= START OF TERMINAL WIDGET ================= -->
 <style>
@@ -67,5 +65,3 @@ Your existing Markdown content goes here. All of your original text, paragraphs,
     });
 </script>
 <!-- ================= END OF TERMINAL WIDGET ================= -->
-
-You can also continue writing normal Markdown down here, below the terminal. This text will also render normally using your original background and theme layout.
