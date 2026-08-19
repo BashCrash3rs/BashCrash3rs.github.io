@@ -1,6 +1,6 @@
 ---
 layout: Page
-title: About Me // Terminal
+title: About BashCrash3rs
 ---
 
 <style>
