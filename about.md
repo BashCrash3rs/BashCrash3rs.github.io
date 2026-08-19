@@ -1,10 +1,12 @@
 ---
-layout: Page
-title: About BashCrash3rs
+layout: default
+title: About Me // Terminal
 ---
 
+Your existing Markdown content goes here. All of your original text, paragraphs, lists, and headings will remain completely intact right here.
+
+<!-- ================= START OF TERMINAL WIDGET ================= -->
 <style>
-    /* Scope styles exclusively to the terminal window container */
     .custom-terminal {
         background-color: #050505 !important;
         color: #00ff33 !important;
@@ -20,8 +22,6 @@ title: About BashCrash3rs
         width: 100%;
         box-sizing: border-box;
     }
-
-    /* The blinking cursor effect */
     .custom-terminal .cursor {
         display: inline-block;
         width: 10px;
@@ -31,20 +31,16 @@ title: About BashCrash3rs
         vertical-align: middle;
         animation: terminal-blink 0.8s infinite;
     }
-
     @keyframes terminal-blink {
         0%, 49% { background-color: #00ff33; }
         50%, 100% { background-color: transparent; }
     }
-
-    /* Matrix-like subtle text glow */
     .custom-terminal .matrix-text {
         text-shadow: 0 0 5px rgba(0, 255, 51, 0.5);
         white-space: pre-wrap; 
     }
 </style>
 
-<!-- Single isolated element block -->
 <div class="custom-terminal">
     <span id="typewriter" class="matrix-text"></span><span class="cursor">&nbsp;</span>
 </div>
@@ -67,7 +63,9 @@ title: About BashCrash3rs
                 setTimeout(typeWriter, speed);
             }
         }
-        
         setTimeout(typeWriter, initialDelay);
     });
 </script>
+<!-- ================= END OF TERMINAL WIDGET ================= -->
+
+You can also continue writing normal Markdown down here, below the terminal. This text will also render normally using your original background and theme layout.
