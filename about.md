@@ -44,7 +44,7 @@ title: About BashCrash3rs
 </div>
 
 <script>
-    const aboutText = `> OBTAINING CREDENTIALS...\n> ACCESS GRANTED...\n> INITIALIZING TEAM PROFILE...\n\nName: BashCrash3rs \nSpecs: Web / Rev / Pwn / OSINT / Steg \n\nBIOGRAPHY:\nWe are a CTF team based in Houston, Texas. This is our official website, our quaint little corner of the interwebz where we host our CTF writeups and maybe a few other things here and there. When not competing in a CTF, we are usually auditing code, configuring networks, and converting caffeine into clean syntax.\n\nWe ba$h. We cr4sh. Sometimes we even cr4sh on the ba$h.\n\n> STATUS: ONLINE. READY FOR COLLABORATION.`;
+    const aboutText = `> OBTAINING CREDENTIALS...\n> ACCESS GRANTED...\n> INITIALIZING PROFILE...\n\nName: BashCrash3rs \nSpecs: Web / Rev / Pwn / OSINT / Steg \n\nBIOGRAPHY:\nWe are a CTF team based in Houston, Texas. This is our official website, our quaint little corner of the interwebz where we host our CTF writeups and maybe a few other things here and there. When not competing in a CTF, we are usually auditing code, configuring networks, and converting caffeine into clean syntax.\n\nWe ba$h. We cr4sh. Sometimes we even cr4sh on the ba$h.\n\n> STATUS: ONLINE. READY FOR COLLABORATION.`;
 
     const speed = 40; 
     const initialDelay = 1500; 
