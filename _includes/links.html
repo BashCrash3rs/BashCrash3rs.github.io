@@ -3,8 +3,31 @@
 <a href="{{ "/archive" | prepend: site.baseurl | replace: '//', '/' }}"><h2 class="header-link">CTF Writeups</h2></a> 
 <a href="{{ "/certificates" | prepend: site.baseurl | replace: '//', '/' }}"><h2 class="header-link">Certificates</h2></a> 
 
-<!-- Absolute Container to force Icons to the right edge -->
-<div style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); display: flex; gap: 15px; align-items: center;">
+<!-- Social Icon Style Tag with Responsive Rules -->
+<style>
+  .header-social-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  /* When the screen width is narrower than 768px (cell phones) */
+  @media (max-width: 768px) {
+    .header-social-container {
+      position: static;          /* Disables the absolute layout positioning */
+      transform: none;           /* Clears the desktop vertical alignment shift */
+      justify-content: center;   /* Centers the icons cleanly underneath your text links */
+      margin-top: 15px;          /* Adds breathing room below the text links */
+    }
+  }
+</style>
+
+<!-- Responsive Container for Icons -->
+<div class="header-social-container">
   
   <!-- Discord SVG Icon -->
   <a href="YOUR_DISCORD_INVITE_LINK" target="_blank" aria-label="Discord Server" style="display: inline-block; color: inherit; line-height: 0;">
@@ -17,5 +40,6 @@
   </a>
 
 </div>
+
 
 
