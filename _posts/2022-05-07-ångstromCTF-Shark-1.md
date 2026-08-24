@@ -1,6 +1,7 @@
 ---
-title: ångstromCTF - MISC - Shark 1
+title: ångstromCTF - Shark 1
 published: true
+category: STEG
 ---
 This was a fairly simple wireshark packet analysis challenge. For this challenge, we were given the following description:
 
