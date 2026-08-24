@@ -1,6 +1,7 @@
 ---
-title: San Diego CTF 2022 - OSINT - Part of the ship
+title: San Diego CTF 2022 - Part of the ship
 published: true
+category: OSINT
 ---
 This was a super simple OSINT challenge that tasked us with the following...
 
