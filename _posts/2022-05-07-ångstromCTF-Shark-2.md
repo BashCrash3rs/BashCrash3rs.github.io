@@ -1,6 +1,7 @@
 ---
-title: ångstromCTF - MISC - Shark 2
+title: ångstromCTF - Shark 2
 published: true
+category: STEG
 ---
 In this continuation to the Shark 1 challenge, this one will also focus on analyzing packet capture files.
 
