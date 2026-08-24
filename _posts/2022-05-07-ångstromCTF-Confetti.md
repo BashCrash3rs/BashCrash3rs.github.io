@@ -1,7 +1,7 @@
 ---
 title: ångstromCTF - Confetti
 published: true
-category: Steg
+category: STEG
 ---
 For this challenge we were given an image of confetti and the lyrics to the song Confetti by Little Mix: "From the sky, drop like confetti All eyes on me, so V.I.P All of my dreams, from the sky, drop like confetti"
 
