@@ -32,7 +32,7 @@ If we look at the top of the page for each song, we see what looks like a small 
 
 ## <- There is our flag! ->
 
-Once we've got all the strings, or "user IDs" collected, we will take those and concatenate them. But first we need to know in what order they should go. But since the song lyrics hint at tracing something back to the source, presumably we need to start with the last song listed and work backwards. We then string them together in this order and run them through our terminal to translate the <code class="language-plaintext highlighter-rouge">base64</code> into readable text and string them all together to see what it gives us. We do this with <code class="language-plaintext highlighter-rouge">printf "%s" "YnJ1bm5lcntmcg==" "MG1fbTM3NGQONw==" "NF83MF81M2NyMw==" "N181MG45fQ==" | base64 -d </code> and the terminal spits out the flag we were searching for.
+Once we've got all the strings, or "user IDs" collected, we will take those and concatenate them. But first we need to know in what order they should go. But since the song lyrics hint at tracing something back to the source, presumably we need to start with the last song listed and work backwards. We then string them together in this order and run them through our terminal to translate the <code class="language-plaintext highlighter-rouge">base64</code> into readable text and string them all together to see what it gives us. We do this with <code class="language-plaintext highlighter-rouge">printf "%s" "YnJ1bm5lcntmcg==" "MG1fbTM3NGQONw==" "NF83MF81M2NyMw==" "N181MG45fQ==" | base64 -d </code>  and the terminal spits out the flag we were searching for.
 
 ![flag](/assets/images/BrunnerCTF/Brunner-Flag.png)
 
