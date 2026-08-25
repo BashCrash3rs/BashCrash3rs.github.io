@@ -7,7 +7,7 @@ This challenge was probably one of the more short and entertaining OSINT challen
 
 An employee at Brunnerne Inc. has made a musical project... but no one actually knows who they are. According to the company, this artist has been using a secret platform to hide a flag and the company has asked us to retrieve it. To help us get started, they have given us a file named osint_unknown-artist.zip
 
-![challenge description](assets/images/BrunnerCTF/Challenge Description.png)
+![challenge_description](assets/images/BrunnerCTF/Challenge Description.png)
 <br><br>
 
 ## <- First, we will take a look at everything the file contains ->
