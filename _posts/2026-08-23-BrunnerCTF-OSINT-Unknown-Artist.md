@@ -17,6 +17,7 @@ We extract the contents of the .zip file and it contains a file named BrunnerneI
 ![exiftool](/assets/images/BrunnerCTF/Brunner-1.png)
 
 Our exiftool finds a few really good clues for us to expand out from. Toward the end of the output, we can see that the lyrics for the song can be found here and there is even a URL that goes to the AI music website Suno. 
+<br><br>
 
 ## <- Artist profile ->
 
