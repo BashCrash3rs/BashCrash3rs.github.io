@@ -12,40 +12,23 @@ An employee at Brunnerne Inc. has made a musical project... but no one actually 
 
 ## <- First, we will take a look at everything the file contains ->
 
-We extract the contents and it contains a file named Brunnerne Inc.mp3 and it is 
+We extract the contents of the .zip file and it contains a file named BrunnerneInc.mp3. We play it and sure enough, it does indeed contain a song. It sounds like some 80's style synthpop and the lyrics are in relation to corporate office work. Now, if this were a stegonography challenge, we might run this track through Sonic Vizualier or Audacity to see if there is a flag in the spectrogram. But since this is purely an OSINT challenge, we will go ahead and skip that for now. Instead, we decide to head over to our terminal and run <code class="language-plaintext highlighter-rouge">exiftool</code> on the file in the hopes of finding our first real clue. We want to make sure that we can see everything in this file and we want the output to be grouped and organized so we aren't just sorting through an unorganized list of things, so we will do <code class="language-plaintext highlighter-rouge">exiftool -a -u -g1 BrunnerneInc.mp3 </code>. Now, this is technically an OSINT challenge so if we were approaching it in the traditional OSINT way, we could achieve this same thing by simply running the file through an online platform like CyberChef.
 
-Before we run the image file through any of our tools, let's first do <code class="language-plaintext highlighter-rouge">eog tv_chall.jpg</code> to see if we can view the image before proceeding. Our image viewer throws 
-an error, telling us that it does not recognize the image as an actual JPEG. 
+![exiftool](/assets/images/BrunnerCTF/Brunner-1.png)
 
-![eog error](https://user-images.githubusercontent.com/104336820/165018827-0ee7e2c9-7103-478c-b879-91b24dc34044.png)
+Our exiftool finds a few really good clues for us to expand out from. Toward the end of the output, we can see that the lyrics for the song can be found here and there is even a URL that goes to the AI music website Suno. 
 
-Of course, we didn't expect it to be as easy as that but nonetheless, it is always a good idea to run down the list of possible avenues to gain any extra info you can.
-                
-Next, we run some basic tools to get some more technical information about the image we are working with. We put the file through binwalk first with <code class="language-plaintext highlighter-rouge">binwalk -e tv_chal.jpg</code>
+## <- Artist profile ->
 
-![binwalk](https://user-images.githubusercontent.com/104336820/165020194-2a2a0689-4478-4fd9-bf4f-2de5ef113c02.png)
+If we visit that URL we found, it will take us to an artist profile where we see four songs that they have published.
 
-binwalk shows us that there is nothing here to extract. This leads us to believe that maybe we should look at the metadata 
-as we now know the flag isn't in a file that we need to extract. The image started life as a TIFF type. Nothing odd here so moving on to try to dig a bit deeper.
+![profile](/assets/images/BrunnerCTF/Brunner-3.png)
 
-We fire up exiftool with <code class="language-plaintext highlighter-rouge">exiftool -v tv_chal.jpg</code> to take a look at the metadata of the file. 
-Here we find a couple of things of interest...
+If we click on any of these songs and read through the lyrics to these songs we are directly told a few things. The most important clues that these songs give us is that we will need to trace the soundwave by following every artifact. It also hints at ID keys being important to our search but that the flag is not going to be hidden in a database log. All of this amounts to needing to find ID keys and group them together in a specific order.
 
-![exiftool](https://user-images.githubusercontent.com/104336820/165020443-d386a41f-2448-4eb6-9ff2-6ac16eeab562.png)
+If we look at the top of the page for each song, we see what looks like a small string of <code class="language-plaintext highlighter-rouge">base64</code>. So, logically, we want to visit each song page and copy each of these <code class="language-plaintext highlighter-rouge">base64</code> strings. 
 
-exiftool gives us a warning that we have an unknown 30-byte header. Then it proceeds to reset the file type as the header configuration is unrecognized which results in our inability to view the image in its current state. All of our recon has led us to assume that the image itself contains the flag and likely it is a matter of a corrupted header. We likely have ourselves a magic numbers issue.
+Once we've got all the strings, or "user IDs" collected, we will take those and concatenate them. But first we need to know in what order they should go. But since the song lyrics hint at tracing something back to the source, presumably we need to start with the last song listed and work backwards. We then string them together in this order and run them through our terminal to translate the <code class="language-plaintext highlighter-rouge">base64</code> into readable text and string them all together to see what it gives us. We do this with <code class="language-plaintext highlighter-rouge">printf "%s" "YnJ1bm5lcntmcg==" "MG1fbTM3NGQONw==" "NF83MF81M2NyMw==" "N181MG45fQ==" | base64 -d </code> and the terminal spits out the flag we were searching for.
 
+![flag](/assets/images/BrunnerCTF/Brunner-Flag.png)
 
-## <- Fixing the header ->
-
-To take a look at the header we use <code class="language-plaintext highlighter-rouge">hexeditor tv_chal.jpg</code> and immediately we are able to see that the file signature for a JPEG file is not what we have here for the magic numbers. 
-
-![hexeditor](https://user-images.githubusercontent.com/104336820/165021657-cf2d5924-f090-44e5-bf89-538d467d63f1.png)
-
-Let's fix that!
-
-![header fixed](https://user-images.githubusercontent.com/104336820/165021788-104b16c0-89cf-47d2-83b0-679c987cc082.png)
-
-Now that the magic numbers have been corrected, we check <code class="language-plaintext highlighter-rouge">eog tv_chal.jpg</code> again to see if we can view the image now...
-
-![can view](https://user-images.githubusercontent.com/104336820/165021971-5fc73c3a-71a8-49e8-8eeb-bc2ae8cb63bd.png)
