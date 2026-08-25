@@ -28,6 +28,9 @@ If we visit that URL we found, it will take us to an artist profile where we see
 If we click on any of these songs and read through the lyrics to these songs we are directly told a few things. The most important clues that these songs give us is that we will need to trace the soundwave by following every artifact. It also hints at ID keys being important to our search but that the flag is not going to be hidden in a database log. All of this amounts to needing to find ID keys and group them together in a specific order.
 
 If we look at the top of the page for each song, we see what looks like a small string of <code class="language-plaintext highlighter-rouge">base64</code>. So, logically, we want to visit each song page and copy each of these <code class="language-plaintext highlighter-rouge">base64</code> strings. 
+<br><br>
+
+## <- Artist profile ->
 
 Once we've got all the strings, or "user IDs" collected, we will take those and concatenate them. But first we need to know in what order they should go. But since the song lyrics hint at tracing something back to the source, presumably we need to start with the last song listed and work backwards. We then string them together in this order and run them through our terminal to translate the <code class="language-plaintext highlighter-rouge">base64</code> into readable text and string them all together to see what it gives us. We do this with <code class="language-plaintext highlighter-rouge">printf "%s" "YnJ1bm5lcntmcg==" "MG1fbTM3NGQONw==" "NF83MF81M2NyMw==" "N181MG45fQ==" | base64 -d </code> and the terminal spits out the flag we were searching for.
 
