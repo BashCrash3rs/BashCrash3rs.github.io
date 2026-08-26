@@ -12,6 +12,7 @@ An employee at Brunnerne Inc has lost their license key for a program they were 
 ## <- Let's toss this into Ghidra and see what we're working with ->
 
 Instead of extracting anything from the .zip file, we are just going to throw the whole thing into Ghidra and let it analyze everything to give us a complete lay of the land, so to speak.
+<br><br>
 
 ![Ghidra analysis](/assets/images/BrunnerCTF/Go-Go-Decompile/Ghidra-Analyze.png)
 <br><br>
