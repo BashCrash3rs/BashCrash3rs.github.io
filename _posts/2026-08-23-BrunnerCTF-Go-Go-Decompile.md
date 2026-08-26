@@ -12,9 +12,9 @@ An employee at Brunnerne Inc has lost their license key for a program they were 
 ## <- Let's toss this into Ghidra and see what we're working with ->
 
 Instead of extracting anything from the .zip file, we are just going to throw the whole thing into Ghidra and let it analyze everything to give us a complete lay of the land, so to speak.
+
+Ghidra does its analysis and we begin to skim through the output. As we are browsing around, we are initially just looking for keywords that might give us a couple of context clues that we can branch off from. We are basically looking for a starting point so we have a semi-defined path or two to journey down. Whenever you decompile a program, it is a good idea to simply take a minute to take note of things that immediately stand out to you, especially if you already have some idea of what you are looking for. Since this is a CTF challenge, we should probably begin looking for references to a "flag" or some variation of the word. At first glance, just by skimming through the initial results that Ghidra gives us, it looks like this program was written in the Go language (this is also a hint that is given to us in the title of the challenge). This is useful information to have because if you have ever decompiled anything in Go, then you know that the functions folder is the first place you should look for its core functionality. So, knowing this we will hop over to 
 <br><br>
 
 ![Ghidra analysis](/assets/images/BrunnerCTF/Go-Go-Decompile/Ghidra-Analyze.png)
 <br><br>
-
-Ghidra does its analysis and we begin to skim through the output. As we are browsing around, we are initially just looking for keywords that might give us a couple of context clues that we can branch off from. We are basically looking for a starting point so we have a semi-defined path or two to journey down. Whenever you decompile a program, it is a good idea to simply take a minute to take note of things that immediately stand out to you, especially if you already have some idea of what you are looking for. Since this is a CTF challenge, we should probably begin looking for references to a "flag" or some variation of the word. And lo and behold, if we look 
