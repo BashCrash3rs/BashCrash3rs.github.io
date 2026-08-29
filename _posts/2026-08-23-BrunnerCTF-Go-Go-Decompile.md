@@ -41,7 +41,8 @@ Next, we will highlight the string we see in the decompile window and this will 
 <br><br>
 
 
-It displays this information in the Listing window. 
+It displays this information in the Listing window. This is a data address that tells us there is some static data stored at the memory address represented by the hexadecimal <code class="language-plaintext highlighter-rouge">004cc9e8</code>.
+<br><br>
 
 ![base64 address](/assets/images/BrunnerCTF/Go-Go-Decompile/Ghidra-b64-memory-address.png)
 <br><br>
