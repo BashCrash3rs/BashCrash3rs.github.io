@@ -47,10 +47,10 @@ It displays this information in the Listing window. This is a data address that 
 ![base64 address](/assets/images/BrunnerCTF/Go-Go-Decompile/Ghidra-b64-memory-address.png)
 <br><br>
 
-If we double-click the <code class="language-plaintext highlighter-rouge">DAT_004cc9e8</code> data address we see in the listing window, it will show us the base64 that has been referenced. 
+If we double-click the <code class="language-plaintext highlighter-rouge">DAT_004cc9e8</code> data address we see in the listing window, it will show us the base64 string that has been referenced. 
 <br><br>
 
-![memory_address](/assets/images/BrunnerCTF/Go-Go-Decompile/Ghidra-b64-memory-address.png)
+![memory_address](/assets/images/BrunnerCTF/Go-Go-Decompile/Ghidra-address-text.png)
 <br><br>
 
 If we make note of that string of base64, starting at the top and moving downward through the string, we can compile the entire string one character at a time. We take that string and we run it through our terminal to decode it. What we get as a result, is some human-readable text... our flag!
