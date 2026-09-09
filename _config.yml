@@ -30,3 +30,9 @@ plugins:
 # Custom variables
 owner : "BashCrash3rs"
 year : "2026"
+
+# Team contact links: edit these in one place.
+discord_url: "https://discord.com/users/1536238970378264586"
+ctftime_url: "https://ctftime.org/team/181683"
+exclude:
+  - REDESIGN-README.md

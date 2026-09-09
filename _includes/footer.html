@@ -1,7 +1,5 @@
-<footer>
-    <span>
-        <b>{{ site.owner}}</b>
-    </span>
-    {% capture currentyear %}{{ 'now' | date: "%Y" }}{% endcapture %}
-    <span>© {{ currentyear }}</span>
+<footer class="site-footer">
+  <a class="brand" href="{{ '/' | relative_url }}">BashCrash<span>3</span>rs<span class="footer-prompt" aria-hidden="true">_</span></a>
+  <span>Houston, Texas · © {{ 'now' | date: '%Y' }}</span>
+  <div><a href="{{ site.discord_url }}" target="_blank" rel="noopener noreferrer">Discord ↗</a><a href="{{ site.ctftime_url }}" target="_blank" rel="noopener noreferrer">CTFtime ↗</a><a href="{{ '/atom.xml' | relative_url }}">Feed</a></div>
 </footer>

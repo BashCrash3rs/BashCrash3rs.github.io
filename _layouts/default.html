@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 {% include head.html %}
 
 <body>
+  <a class="skip-link" href="#main_content">Skip to content</a>
   <div id="wrapper">
     {% include header.html %}
     <div class="container">
-      <section id="main_content">
+      <main id="main_content" tabindex="-1">
         {{ content }}
-      </section>
+      </main>
     </div>
   </div>
 

@@ -1,36 +1,15 @@
 ---
-layout: page
+layout: default
 title: CTF Writeups
 ---
-
-<section>
-  {% if site.posts[0] %}
-
-{% capture firstpostyear %}{{ site.posts[0].date | date: '%Y' }}{% endcapture %}
-<h3>{{ firstpostyear }}</h3>
-
-{% for post in site.posts %}
-  {% unless post.next %}
-    <ul>
-  {% else %}
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-
-    {% if year != nyear %}
-      </ul>
-      <h3>{{ post.date | date: '%Y' }}</h3>
-      <ul>
-    {% endif %}
-  {% endunless %}
-
-    <li><span>{{ post.categories | first }} - </span>
-      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-        {{ post.title }}
-      </a>
-    </li>
-
-{% endfor %}
-</ul>
-
-  {% endif %}
+<section class="archive-content">
+  <header class="page-heading"><p class="eyebrow">THE ARCHIVE / {{ site.posts | size }} WRITEUPS</p><h1>Every flag has a story.</h1><p>Challenge breakdowns, dead ends, and the path to the solve.</p></header>
+  {% assign groups = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}
+  {% for group in groups %}
+  <section class="archive-year"><h2>{{ group.name }}</h2><div class="writeup-list">
+    {% for post in group.items %}
+    <a class="writeup-row" href="{{ post.url | relative_url }}"><span class="category">{{ post.categories | first | default: 'CTF' | escape }}</span><div><h3>{{ post.title | escape }}</h3></div><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d' }}</time><span class="row-arrow" aria-hidden="true">↗</span></a>
+    {% endfor %}
+  </div></section>
+  {% endfor %}
 </section>

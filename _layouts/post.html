@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-
-<article>
-  <h2>{{ page.title }}</h2>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
-  {{ content }}
+<article class="post-content">
+  <a class="text-link back-link" href="{{ '/archive' | relative_url }}">← All writeups</a>
+  <header class="page-heading"><p class="eyebrow">{{ page.categories | join: ' / ' | escape }} / WRITEUP</p><h1>{{ page.title | escape }}</h1><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time></header>
+  <div class="prose">{{ content }}</div>
+  <div class="post-end"><span class="prompt"># End of writeup</span><a href="{{ '/archive' | relative_url }}">Back to the archive ↗</a></div>
 </article>
