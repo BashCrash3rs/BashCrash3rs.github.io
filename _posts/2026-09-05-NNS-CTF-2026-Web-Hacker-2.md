@@ -8,7 +8,7 @@ category: WEB
 CTF WRITEUP COMING SOON
 <br><br>
 
-![Challenge Description](assets/images/NNSCTF2026/1_Challenge_Intro.webp)
+![Challenge Description](/assets/images/NNSCTF2026/1_Challenge_Intro.webp)
 <br><br>
 
 ## <- Let's toss this into Ghidra and see what we're working with ->
