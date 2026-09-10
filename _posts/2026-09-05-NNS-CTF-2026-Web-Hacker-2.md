@@ -8,7 +8,7 @@ category: WEB
 CTF WRITEUP COMING SOON
 <br><br>
 
-<img src="[https://google.com](https://drive.google.com/file/d/1UeHoZtsQkiVINsgwrzAYRNTCsSWI4tb3/view?usp=drive_link)" alt="Challenge Description">
+<img src="[https://google.com](https://drive.google.com/file/d/1UeHoZtsQkiVINsgwrzAYRNTCsSWI4tb3)" alt="Challenge Description">
 
 ![Challenge Description](https://drive.google.com/file/d/1UeHoZtsQkiVINsgwrzAYRNTCsSWI4tb3/view?usp=drive_link)
 <br><br>
