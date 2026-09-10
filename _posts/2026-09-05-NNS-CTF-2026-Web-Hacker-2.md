@@ -4,6 +4,7 @@ published: true
 category: WEB
 ---
 
+***THIS CTF WRITEUP IS IN PROGRESS**
 
 This challenge was a beginner level web exploitation challenge that we thought would be fun to run through. After all, sometimes it is nice to log an easy capture and refresh yourself on some of the basics. We were given a really straight forward challenge introduction that simply asked if we have ever hacked a website before and to start here. It gave us a link to visit:
 <br><br>
@@ -19,6 +20,7 @@ So, we visit the URL and are met with a page that asks us to take a look at the 
 <br><br>
 
 So, all we have to do here is change <code class="language-plaintext highlighter-rouge">page=1</code> to <code class="language-plaintext highlighter-rouge">page=2</code> and that should allow us to move to the next page. We change the parameter and bing, we are able to move on to the next step of the challenge...
+<br><br>
 
 ## <- IDOR ->
 
