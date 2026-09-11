@@ -1,6 +1,40 @@
 ---
 layout: default
 ---
+<style>
+/* Only the background logo is faded; terminal text stays fully opaque. */
+.hero .terminal { min-width: 0; }
+.hero .terminal-body {
+  position: relative;
+  isolation: isolate;
+  overflow-wrap: anywhere;
+}
+.hero .terminal-body::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("{{ '/assets/images/bashcrash3rs-logo.png' | relative_url }}");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.065;
+}
+.hero .terminal-body dd { min-width: 0; }
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; gap: 40px; }
+  .hero .terminal { width: 100%; max-width: 550px; transform: none; }
+}
+@media (max-width: 380px) {
+  .hero h1 { font-size: 36px; letter-spacing: -1.8px; }
+  .hero .terminal-body { padding: 16px; }
+  .hero .terminal-title { font-size: 22px; }
+  .hero .terminal-body dl > div { gap: 10px; }
+}
+</style>
+
 {% if paginator.page == 1 or paginator == nil %}
 <section class="hero">
   <div class="hero-copy">
@@ -14,7 +48,11 @@ layout: default
     <div class="terminal-body">
       <p><span class="prompt">team@bashcrash3rs:~$</span> cat team.txt</p>
       <p class="terminal-title">BASH<span>CRASH3RS</span></p>
-      <dl><div><dt>location</dt><dd>Houston, Texas</dd></div><div><dt>focus</dt><dd>Capture the flag</dd></div><div><dt>approach</dt><dd>Break it. Understand it.</dd></div></dl>
+      <dl>
+          <div><dt>location</dt><dd>Houston, Texas</dd></div>
+          <div><dt>focus</dt><dd>Capture the flag</dd></div>
+          <div><dt>approach</dt><dd>Break it. Understand it.</dd></div>
+        </dl>
       <p class="terminal-comment"># Follow the clues. Document the solve.</p>
       <p><span class="prompt">team@bashcrash3rs:~$</span> ls skills/</p>
       <div class="skills"><span>WEB</span><span>REV</span><span>PWN</span><span>OSINT</span><span>STEG</span></div>
