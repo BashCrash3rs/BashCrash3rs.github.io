@@ -1,89 +1,121 @@
 ---
 layout: default
 ---
-<style>
-/* Only the background logo is faded; terminal text stays fully opaque. */
-.hero .terminal { min-width: 0; }
-.hero .terminal-body {
-  position: relative;
-  isolation: isolate;
-  overflow-wrap: anywhere;
-}
-.hero .terminal-body::before {
-  content: "";
-  position: absolute;
-  inset: 18px;
-  z-index: -1;
-  pointer-events: none;
-  background-image: url("{{ '/assets/images/bashcrash3rs-logo.png' | relative_url }}");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: grayscale(100%);
-  opacity: 0.035;
-}
-.hero .terminal-body dd { min-width: 0; }
-@media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; gap: 40px; }
-  .hero .terminal { width: 100%; max-width: 550px; transform: none; }
-}
-@media (max-width: 380px) {
-  .hero h1 { font-size: 36px; letter-spacing: -1.8px; }
-  .hero .terminal-body { padding: 16px; }
-  .hero .terminal-title { font-size: 22px; }
-  .hero .terminal-body dl > div { gap: 10px; }
-}
-</style>
 
 {% if paginator.page == 1 or paginator == nil %}
 <section class="hero">
   <div class="hero-copy">
-    <p class="eyebrow">HOUSTON, TX / CAPTURE THE FLAG</p>
-    <h1>Curiosity.<br>Chaos.<br><span>Captured flags.</span></h1>
+    <p class="eyebrow">
+<em>HOUSTON, TX</em>
+<span aria-hidden="true"> / </span>CAPTURE THE FLAG</p>
+    <h1>Curiosity.<br>Chaos.<br>
+<span>Captured flags.</span>
+</h1>
     <p class="hero-description">We’re BashCrash3rs. A CTF team based in Houston that enjoys taking challenges apart, analyzing all the weird clues, and sharing what we learn along the way.</p>
-    <div class="actions"><a class="button primary" href="{{ '/archive' | relative_url }}">Read the writeups <span>↗</span></a><a class="button secondary" href="{{ site.ctftime_url }}" target="_blank" rel="noopener noreferrer">Team on CTFtime ↗</a></div>
+    <div class="actions">
+<a class="button primary" href="{{ '/archive' | relative_url }}">Read the writeups <span>↗</span>
+</a>
+<a class="button secondary" href="{{ site.ctftime_url }}" target="_blank" rel="noopener noreferrer">Team on CTFtime ↗</a>
+</div>
   </div>
   <div class="terminal" aria-label="Team profile">
-    <div class="terminal-bar"><span aria-hidden="true">● ● ●</span><span>bashcrash3rs — bash</span><span>~</span></div>
+    <div class="terminal-bar">
+<span aria-hidden="true">● ● ●</span>
+<span>bashcrash3rs — bash</span>
+<span>~</span>
+</div>
     <div class="terminal-body">
-      <p><span class="prompt">team@bashcrash3rs:~$</span> cat team.txt</p>
-      <p class="terminal-title">BASH<span>CRASH3RS</span></p>
+      <p>
+<span class="prompt">team@bashcrash3rs:~$</span> cat team.txt</p>
+      <p class="terminal-title">BASH<span>CRASH3RS</span>
+</p>
       <dl>
-          <div><dt>location</dt><dd>Houston, Texas</dd></div>
-          <div><dt>focus</dt><dd>Capture the flag</dd></div>
-          <div><dt>approach</dt><dd>Break it. Understand it.</dd></div>
+          <div>
+<dt>location</dt>
+<dd>Houston, Texas</dd>
+</div>
+          <div>
+<dt>focus</dt>
+<dd>Capture the flag</dd>
+</div>
+          <div>
+<dt>approach</dt>
+<dd>Break it. Understand it.</dd>
+</div>
         </dl>
       <p class="terminal-comment"># Follow the clues. Document the solve.</p>
-      <p><span class="prompt">team@bashcrash3rs:~$</span> ls skills/</p>
-      <div class="skills"><span>WEB</span><span>REV</span><span>PWN</span><span>OSINT</span><span>STEG</span></div>
-      <p class="last-command"><span class="prompt">team@bashcrash3rs:~$</span> <span class="cursor" aria-hidden="true"></span></p>
+      <p>
+<span class="prompt">team@bashcrash3rs:~$</span> ls skills/</p>
+      <div class="skills">
+<span>WEB</span>
+<span>REV</span>
+<span>PWN</span>
+<span>OSINT</span>
+<span>STEG</span>
+</div>
+      <p class="last-command">
+<span class="prompt">team@bashcrash3rs:~$</span> <span class="cursor" aria-hidden="true">
+</span>
+</p>
     </div>
   </div>
 </section>
-<section class="bash-cta" aria-labelledby="bash-cta-title">
-  <div class="bash-cta-copy">
-    <h2 id="bash-cta-title">We ba$h. We cr4sh.</h2>
-    <p class="bash-cta-description">
-      Sometimes we even cr4sh on the ba$h.
-    </p>
-  </div>
-
-  <a class="bash-cta-link" href="{{ '/about' | relative_url }}">
-    Meet the team <span aria-hidden="true">↗</span>
-  </a>
-</section>
+<div class="discipline-strip" aria-label="Team interests">
+<span class="label">OUR PLAYGROUND</span>
+<span>WEB EXPLOITATION</span>
+<i>/</i>
+<span>REVERSE ENGINEERING</span>
+<i>/</i>
+<span>PWN</span>
+<i>/</i>
+<span>OSINT</span>
+<i>/</i>
+<span>STEGANOGRAPHY</span>
+</div>
 {% endif %}
 <section class="writeups-section">
-  <div class="section-heading"><div><p class="eyebrow">FIELD NOTES / CTF WRITEUPS</p><h2>{% if paginator.page > 1 %}From the archive{% else %}Inside our recent solves.{% endif %}</h2></div><a class="text-link" href="{{ '/archive' | relative_url }}">All writeups ↗</a></div>
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">FIELD NOTES / RECENT WRITEUPS</p>
+      <h2>{% if paginator.page > 1 %}From the <span>archive.</span>{% else %}Behind the <span>flag.</span>{% endif %}</h2>
+    </div>
+    <a class="text-link" href="{{ '/archive' | relative_url }}">All {{ site.posts | size }} writeups ↗</a>
+  </div>
   <div class="writeup-list">
-  {% assign entries = paginator.posts | default: site.posts %}
-  {% for post in entries %}
+    {% assign entries = paginator.posts | default: site.posts %}
+    {% for post in entries %}
     <a class="writeup-row" href="{{ post.url | relative_url }}">
       <span class="category">{{ post.categories | first | default: 'CTF' | escape }}</span>
-      <div><h3>{{ post.title | escape }}</h3><p>{{ post.content | strip_html | normalize_whitespace | truncatewords: 22 | escape }}</p></div>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d, %Y' }}</time><span class="row-arrow" aria-hidden="true">↗</span>
+      <div>
+        <h3>{{ post.title | escape }}</h3>
+        {% if post.url contains 'NNS-CTF-2026-Web-Hacker-2' and post.content contains 'THIS CTF WRITEUP IS IN PROGRESS' %}
+        <p>In progress · Following URL parameters into a beginner web exploitation challenge.</p>
+        {% else %}
+        <p>{{ post.content | strip_html | normalize_whitespace | truncatewords: 22 | escape }}</p>
+        {% endif %}
+      </div>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d, %Y' }}</time>
+      <span class="row-arrow" aria-hidden="true">↗</span>
     </a>
-  {% endfor %}
+    {% endfor %}
   </div>
 </section>
-<section class="connect"><div><p class="eyebrow">KEEP THE CONVERSATION GOING</p><h2>Trade notes. Talk CTFs.</h2></div><a class="button primary" href="{{ site.discord_url }}" target="_blank" rel="noopener noreferrer">Connect on Discord ↗</a></section>
+
+{% if paginator.page == 1 or paginator == nil %}
+<section class="manifesto">
+<div>
+<p class="eyebrow">THE BASHCRASH3RS WAY</p>
+<p>We ba$h. We cr4sh.<br>
+<span>Sometimes we even cr4sh on the ba$h.</span>
+</p>
+</div>
+<a class="text-link" href="{{ '/about' | relative_url }}">Meet the team ↗</a>
+</section>
+{% endif %}
+<section class="connect">
+<div>
+<p class="eyebrow">KEEP THE CONVERSATION GOING</p>
+<h2>Trade notes. Talk CTFs.</h2>
+</div>
+<a class="button" href="{{ site.discord_url }}" target="_blank" rel="noopener noreferrer">Connect on Discord ↗</a>
+</section>
