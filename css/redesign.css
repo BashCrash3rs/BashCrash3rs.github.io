@@ -3,3 +3,88 @@
 @media(max-width:1050px){.hero{gap:30px}.hero h1{font-size:57px}.terminal-body{padding:20px}.terminal{font-size:12px}.skills{gap:13px}.site-header nav{gap:18px}.manifesto{gap:20px}.terminal-comment{font-size:12px}}
 @media(max-width:780px){.container,.site-header,.site-footer,.pagination{width:calc(100% - 40px)}.site-header{align-items:flex-start;flex-direction:column;padding:22px 0;gap:18px}.site-header nav{width:100%;gap:22px;flex-wrap:wrap}.hero{grid-template-columns:1fr;padding:55px 0;gap:40px}.hero h1{font-size:clamp(44px,9vw,65px);letter-spacing:-2px}.hero-description{max-width:590px}.terminal{transform:none;font-size:14px;max-width:550px;width:100%}.terminal-title{font-size:26px}.manifesto{align-items:flex-start;flex-direction:column}.manifesto .eyebrow{max-width:none}.writeup-row{grid-template-columns:60px minmax(0,1fr) 20px;gap:15px}.writeup-row time{grid-column:2;grid-row:2}.writeup-row .row-arrow{grid-column:3;grid-row:1}.writeup-row h3{font-size:18px}.writeup-row p{display:none}.connect{align-items:flex-start;flex-direction:column;padding:25px}.site-footer{flex-wrap:wrap}.site-footer>div{width:100%}.section-heading{align-items:flex-end}.section-heading h2{font-size:29px}.section-heading .eyebrow{font-size:12px;letter-spacing:1px}.page-content,.post-content,.archive-content{margin-top:40px}.post-end{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+/* Green BashCrash3rs banner — existing site fonts */
+.bash-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 36px 40px;
+  background: #c5f85c;
+  color: #161b10;
+  font-family: inherit;
+}
+
+.bash-cta-copy {
+  min-width: 0;
+}
+
+.bash-cta .bash-cta-label {
+  margin: 0 0 12px;
+  color: #47552e;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.bash-cta h2 {
+  margin: 0 0 18px;
+  color: #161b10;
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.bash-cta .bash-cta-description {
+  margin: 0;
+  color: #161b10;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.bash-cta .bash-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 10px 0 6px;
+  border-bottom: 1px solid #657b41;
+  color: #161b10;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.bash-cta .bash-cta-link:hover {
+  color: #161b10;
+  border-bottom-color: #161b10;
+}
+
+.bash-cta .bash-cta-link:focus-visible {
+  outline: 2px solid #161b10;
+  outline-offset: 6px;
+}
+
+/* Mobile layout */
+@media (max-width: 720px) {
+  .bash-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 28px;
+  }
+
+  .bash-cta h2 {
+    font-size: 28px;
+  }
+}
