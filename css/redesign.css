@@ -10,7 +10,7 @@
   justify-content: space-between;
   gap: 32px;
   padding: 36px 40px;
-  background: #c5f85c;
+  background: var(--green);
   color: #161b10;
   font-family: inherit;
 }
