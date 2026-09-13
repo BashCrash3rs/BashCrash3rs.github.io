@@ -60,7 +60,19 @@ layout: default
     </div>
   </div>
 </section>
-<div class="manifesto"><p>We ba$h. We cr4sh.<br><span>Sometimes we even cr4sh on the ba$h.</span></p><a class="text-link" href="{{ '/about' | relative_url }}">Meet the team ↗</a></div>
+<section class="bash-cta" aria-labelledby="bash-cta-title">
+  <div class="bash-cta-copy">
+    <p class="bash-cta-label">The BashCrash3rs Way</p>
+    <h2 id="bash-cta-title">We ba$h. We cr4sh.</h2>
+    <p class="bash-cta-description">
+      Sometimes we even cr4sh on the ba$h.
+    </p>
+  </div>
+
+  <a class="bash-cta-link" href="{{ '/about' | relative_url }}">
+    Meet the team <span aria-hidden="true">↗</span>
+  </a>
+</section>
 {% endif %}
 <section class="writeups-section">
   <div class="section-heading"><div><p class="eyebrow">FIELD NOTES / CTF WRITEUPS</p><h2>{% if paginator.page > 1 %}From the archive{% else %}Inside our recent solves.{% endif %}</h2></div><a class="text-link" href="{{ '/archive' | relative_url }}">All writeups ↗</a></div>
