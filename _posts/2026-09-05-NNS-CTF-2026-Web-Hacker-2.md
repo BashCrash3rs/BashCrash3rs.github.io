@@ -4,22 +4,28 @@ published: true
 category: WEB
 ---
 
-***THIS CTF WRITEUP IS IN PROGRESS**
+## <- Multi-Stage IDOR Challenge ->
 
-This challenge was a beginner level web exploitation challenge that we thought would be fun to run through. After all, sometimes it is nice to log an easy capture and refresh yourself on some of the basics. We were given a really straight forward challenge introduction that simply asked if we have ever hacked a website before and to start here. It gave us a link to visit:
+This challenge was a beginner level web exploitation challenge that we thought would be fun to run through. After all, sometimes it is nice to log an easy capture and refresh yourself on some of the basics. If you're new to web hacking, this type of challenge is all about one of the most common (and easiest to understand) vulnerabilities: IDOR, which stands for Insecure Direct Object Reference.
+
+Basically, IDOR exploitation is what happens when a website lets you look at someone else's stuff just by changing a piece of the web address (URL), because the server never actually checks whether you're allowed to see it. This is a type of access control vulnerability.
+
+Jumping into this challenge, we were given a really straight forward introduction that simply asked if we have ever hacked a website before and to start here. It gave us a link to visit:
 <br><br>
 
 ![Challenge Description](/assets/images/NNSCTF2026/1_Challenge_Intro.webp)
 <br><br>
 
-We visit the URL and are met with a page that asks us to take a look at the query parameter in the URL and think about how this might be abused by a hacker. The parameter here is <code class="language-plaintext highlighter-rouge">page=1</code>. This should be easy enough as this is what is called an IDOR attack (Insecure Direct Object Reference) and all this kind of attack requires is the simple changing of a URL parameter on a page that is missing an access control check.  
+## <- Pagination IDOR ->
+
+We visit the URL and are met with a page that asks us to take a look at the query parameter in the URL and think about how this might be abused by a hacker. The parameter here is <code class="language-plaintext highlighter-rouge">page=1</code>. This step of the challenge is what we might refer to as pagination IDOR since right now what we are dealing with is simply hopping from one page to the next by manipulating the URL.
 <br><br>
 
 ![Challenge Description](/assets/images/NNSCTF2026/3_The_First_URL.webp)
 ![Challenge Description](/assets/images/NNSCTF2026/2_Page_1_URL_Change.webp)
 <br><br>
 
-So, all we have to do here is change <code class="language-plaintext highlighter-rouge">page=1</code> to <code class="language-plaintext highlighter-rouge">page=2</code> and that should allow us to move to the next page. We change the parameter and are able to move on to the next step of the challenge...
+So, all we have to do here is change <code class="language-plaintext highlighter-rouge">page=1</code> to <code class="language-plaintext highlighter-rouge">page=2</code>. We change the parameter and are able to move on to the next step of the challenge...
 <br><br>
 
 ## <- IDOR ->
@@ -38,4 +44,6 @@ In that quote, the name admin is highlighted in a way that is sort of hard to ig
 ![Challenge Description](/assets/images/NNSCTF2026/6_Boarding_Pass.webp)
 <br><br>
 
-This screen shows us an aircraft boarding pass from an airline called NNS Air. There is a lot of information listed on it but the majority of it is of no use to us other than maybe to confuse us with a bunch of dead ends. One of the first tools that comes to mind when trying to solve web exploits challenges is, of course, Burp Suite. So we are going to load it up and use it to explore the webpage. With Burp Suite open, we will visit the page again to inspect the webpage's sitemap. Here we see that we have a couple of endpoint to explore 
+This screen shows us an aircraft boarding pass from an airline called NNS Air. There is a lot of information listed on it but the majority of it is of no use to us other than maybe to confuse us with a bunch of dead ends. One of the first tools that comes to mind when trying to solve web exploits challenges is, of course, Burp Suite. So we are going to load it up and use it to explore the webpage. With Burp Suite open, we will visit the page again to inspect the webpage's sitemap. Here we see that we have a couple of endpoints that we can explore.
+
+
