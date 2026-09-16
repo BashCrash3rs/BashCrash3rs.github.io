@@ -47,7 +47,7 @@ In that quote, the name 'admin' is highlighted in a way that is sort of hard to 
 ![Challenge Description](/assets/images/NNSCTF2026/6_Boarding_Pass.webp)
 <br><br>
 
-This screen shows us an aircraft boarding pass from an airline called NNS Air. There is a lot of information listed on it but the majority of it is of no use to us other than maybe to confuse us with a bunch of dead ends. One of the first tools that comes to mind when trying to solve web exploits challenges is, of course, Burp Suite. We load up our tool and open the built-in browser option since this browser is already configured to allow traffic to pass through Burp Suite and we will use that browser to visit the page as we might normally (this is the easiest option but you can also configure your own browser in this way instead). Doing so will pass information about the website over to our tool so that we can have a look at the webpage's sitemap. Here we see that we have a couple of endpoints that we can explore. In the <code class="language-plaintext highlighter-rouge">Sitemap</code> tab, we will start to look for anything that looks like it is in reference to our personal data. In this case, we would be looking for references to John (us in this challenge). Flipping through the site map we can see:
+This screen shows us an aircraft boarding pass from an airline called NNS Air. There is a lot of information listed on it but the majority of it is of no use to us other than maybe to confuse us with a bunch of dead ends. One of the first tools that comes to mind when trying to solve web exploits challenges is, of course, Burp Suite. We load up our tool and open the built-in browser option since this browser is already configured to allow traffic to pass through Burp Suite and we will use that browser to visit the page as we might normally (this is the easiest option but you can also configure your own browser in this way instead). Doing so will pass information about the website over to our tool so that we can have a look at the webpage's sitemap. Here we see that we have a couple of endpoints that we can explore. In the <code class="language-plaintext highlighter-rouge">Sitemap</code> tab, we will start to look for anything that looks like it is in reference to our personal data. In this case, we would be looking for references to John as this is the name we can see on the boarding pass (us in this challenge). Flipping through the site map we can see:
 
 > GET /api/boarding-pass/john
 <br><br>
@@ -55,4 +55,17 @@ This screen shows us an aircraft boarding pass from an airline called NNS Air. T
 ![API Endpoints](/assets/images/NNSCTF2026/8_Site_Map_John_Boarding_Pass.webp)
 <br><br>
 
+If we click on that request, we will see the raw data that the server sent back to us in <code class="language-plaintext highlighter-rouge">Response</code> panel. What we find there is a chunk of JSON (structured text data) that looks like this:
+<br><br>
+
+![API Endpoints](/assets/images/NNSCTF2026/8_Site_Map_John_Boarding_Pass.webp)
+<br><br>
+
+The important part of that JSON is
+
+>   {
+     "id": "01d6fcce-1d70-7000-af8e-08b834415b5a",
+     "username": "john",
+     "qrCode": "..."
+   }
 
