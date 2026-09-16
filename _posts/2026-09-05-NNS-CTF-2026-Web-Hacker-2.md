@@ -58,10 +58,10 @@ This screen shows us an aircraft boarding pass from an airline called NNS Air. T
 If we click on that request, we will see the raw data that the server sent back to us in <code class="language-plaintext highlighter-rouge">Response</code> panel. What we find there is a chunk of JSON (structured text data) that looks like this:
 <br><br>
 
-![API Endpoints](/assets/images/NNSCTF2026/8_Site_Map_John_Boarding_Pass.webp)
+![API Endpoints](/assets/images/NNSCTF2026/7_BurpSuite_Intercept_JSON.webp)
 <br><br>
 
-The important part of that JSON is
+The most important part of that JSON chunk for us is right near the top:
 
 >   {
      "id": "01d6fcce-1d70-7000-af8e-08b834415b5a",
