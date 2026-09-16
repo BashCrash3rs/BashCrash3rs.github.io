@@ -63,9 +63,9 @@ If we click on that request, we will see the raw data that the server sent back 
 
 The most important part of that JSON chunk for us is right near the top:
 
->   {
->     "id": "01d6fcce-1d70-7000-af8e-08b834415b5a",
->     "username": "john",
->     "qrCode": "..."
->   }
+>   { <br>
+>       "id": "01d6fcce-1d70-7000-af8e-08b834415b5a", <br>
+>       "username": "john", <br>
+>       "qrCode": "..." <br>
+>   } <br>
 
