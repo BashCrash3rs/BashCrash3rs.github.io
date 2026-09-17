@@ -63,9 +63,21 @@ If we click on that request, we will see the raw data that the server sent back 
 
 The most important part of that JSON chunk for us is right near the top:
 
-> { <br>
->   "id": "01d6fcce-1d70-7000-af8e-08b834415b5a", <br>
->   "username": "john", <br>
->   "qrCode": "..." <br>
-> } <br>
+{
+   "id": "01d6fcce-1d70-7000-af8e-08b834415b5a",
+   "username": "john",
+   "qrCode": "..."
+}
 
+Right there in the chunk we see the username <code class="language-plaintext highlighter-rouge">John</code>. So this poses one important question to us... what if we were to change that name somehow and send the request back?
+
+Now, before we just take a guess at this being the solution we are looking for, let's take a minute to see what is actually happening here. If we just do <code class="language-plaintext highlighter-rouge">View Page Source</code> on the webpage or look deeper into the Response body of the page's own load request in Burp Suite, we will find the following JavaScript buried in there:
+
+// You are signed in as john.
+const username = 'john';
+
+fetch('/api/boarding-pass/' + username)
+
+What this tells us is that we have pretty much found the smoking gun. The website's own front-end code has our username hardcoded and uses it to ask the server for our boarding pass. There's no login token or session check that's happening here, it's just building a URL with a name and sending it. This means that the server is trusting whatever name shows up in that URL, all with no questions asked.
+
+**The lesson:** if a website builds a request to fetch "your" data using a plain, visible identifier (a name, a number, an ID) instead of relying on something tied to your actual login session, you can usually just... ask for someone else's identifier instead.
