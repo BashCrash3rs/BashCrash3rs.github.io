@@ -4,7 +4,6 @@ published: true
 category: WEB
 ---
 
-## <- Multi-Stage IDOR Challenge ->
 
 This challenge was a beginner level web exploitation challenge that we thought would be fun to run through. After all, sometimes it is nice to log an easy capture and refresh yourself on some of the basics. If you're new to web hacking, this type of challenge is all about one of the most common (and easiest to understand) vulnerabilities: <code class="language-plaintext highlighter-rouge">IDOR</code>, which stands for <code class="language-plaintext highlighter-rouge">Insecure Direct Object Reference</code>.
 
