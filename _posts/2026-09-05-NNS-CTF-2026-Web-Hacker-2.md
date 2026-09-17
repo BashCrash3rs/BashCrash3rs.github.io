@@ -110,7 +110,7 @@ We now just click Send and check out the Response we get back. We received a <co
 ![flag](/assets/images/NNSCTF2026/10_Response_and_Flag.webp)
 <br><br>
 
-<code class="language-plaintext highlighter-rouge">NNS{You_aR3_NOw_1337_H4cker_1NDe3D}</code>
+> Here is our flag! <code class="language-plaintext highlighter-rouge">NNS{You_aR3_NOw_1337_H4cker_1NDe3D}</code>
 
 ## <- What actually made this vulnerable ->
 
