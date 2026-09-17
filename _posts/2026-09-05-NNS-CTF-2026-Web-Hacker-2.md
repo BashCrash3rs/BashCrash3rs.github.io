@@ -63,10 +63,10 @@ If we click on that request, we will see the raw data that the server sent back 
 
 The most important part of that JSON chunk for us is right near the top:
 
->{<br>
->   "id": "01d6fcce-1d70-7000-af8e-08b834415b5a",<br>
->   "username": "john",<br>
->   "qrCode": "..."<br>
+>{
+>   "id": "01d6fcce-1d70-7000-af8e-08b834415b5a",
+>   "username": "john",
+>   "qrCode": "..."
 >}
 
 Right there in the chunk we see the username <code class="language-plaintext highlighter-rouge">John</code>. So this poses one important question to us... what if we were to change that name somehow and send the request back?
