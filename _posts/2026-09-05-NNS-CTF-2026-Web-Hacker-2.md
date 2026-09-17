@@ -73,7 +73,7 @@ Right there in the chunk we see the username <code class="language-plaintext hig
 
 Now, before we just take a guess at this being the solution we are looking for, let's take a minute to see what is actually happening here. If we just do <code class="language-plaintext highlighter-rouge">View Page Source</code> on the webpage or look deeper into the Response body of the page's own load request in Burp Suite, we will find the following JavaScript buried in there:
 
-> // You are signed in as john.
+> // You are signed in as john.<br>
 > const username = 'john';
 > 
 > fetch('/api/boarding-pass/' + username)
