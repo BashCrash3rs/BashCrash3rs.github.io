@@ -119,7 +119,7 @@ Think of it like a hotel where your room key also happens to work on every other
 That's the whole bug. No cleverness needed beyond simply noticing the pattern and then testing it.
 <br><br>
 
-## <- How to spot this kind of bug yourself, going forward ->
+## <- How to spot this kind of bug yourself ->
 
 Ask yourself these questions whenever you're testing a website:
 
